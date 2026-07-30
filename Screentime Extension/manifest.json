@@ -1,0 +1,37 @@
+{
+
+"name": "Attention Manager",
+"description": "Screentime Manager",
+"version": "1.0",
+"manifest_version": 3,
+
+"action": {
+	"default_icon": "graphics/solution-thinking-icon.png"
+	
+},
+
+"permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "alarms"
+  ],
+  
+"host_permissions": [
+  "<all_urls>"
+],
+
+"background": {
+    "service_worker": "scripts/background.js"
+  },
+
+"content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+]
+
+}
